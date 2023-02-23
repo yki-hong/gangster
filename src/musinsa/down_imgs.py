@@ -18,8 +18,6 @@ for page in pages:
   img_folder_name = hashlib.md5(url.encode()).hexdigest()
   if not os.path.exists(os.path.join(DATA_PATH, img_folder_name)):
     os.makedirs(os.path.join(DATA_PATH, img_folder_name))
-  else:
-    continue
 
   # save page_url info
   with open(os.path.join(DATA_PATH, img_folder_name, "page_info.json"), "w") as _f:
